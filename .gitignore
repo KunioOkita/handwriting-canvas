@@ -1,0 +1,6 @@
+node_modules
+logs
+update
+upload
+npm-debug.log
+.tern-port
