@@ -1,0 +1,22 @@
+header {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+}
+
+#wrap_canvas {
+    display: none;
+}
+
+#draw-area {
+    cursor : pointer;
+    margin: 0;
+    padding: 0;
+    border: solid 1px black;
+}
+
+.connected {
+    color: blue;
+}
