@@ -54,7 +54,7 @@ function mouseDraw(e) {
     var y = e.clientY - offsetY;
     var context = canvasElem.getContext("2d");
     context.fillStyle = "rgba(255,0,0,1)";
-    context.lineWidth = 1;
+    context.lineWidth = 3;
     context.beginPath();
     context.moveTo(oldX, oldY);
     context.lineTo(x, y);
