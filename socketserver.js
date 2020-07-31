@@ -62,7 +62,7 @@ function webSocketServer(port) {
 	    var client = {'user_id':user_id,
 			  'socket':clientSocket};
 	    _self.addUser(client);
-	    logger.debug(_self.getConnectClient());
+	    logger.debug(_self.getConnectUsers());
 	}
 
 	if (user_id != ADMIN) {
@@ -71,7 +71,7 @@ function webSocketServer(port) {
 		'to':ADMIN,
 		'data_type':DATA_TYPE.login, 
 		'data': ''};
-	    
+
 	    logger.info('send login message');
 	    _self.sendMsg(ADMIN, sendMsg);
 	}
@@ -79,7 +79,7 @@ function webSocketServer(port) {
 	clientSocket.on('message', function(msg) {
             logger.info('Recive message : ' + msg);
 	    var rMsg = JSON.parse(msg);
-	    _self.sendMsg(rMsg.to, rMsg)
+	    _self.sendMsg(rMsg.to, rMsg);
 	});
 
 	// Socket Close Event
@@ -107,7 +107,9 @@ webSocketServer.prototype.startup = function() {
 webSocketServer.prototype.sendMsg = function(toUser, data) {
     var client = this.getClient(toUser);
     var sendData = JSON.stringify(data);
-    client.socket.send(sendData);
+    if (client) {
+        client.socket.send(sendData);
+    }
 }
 
 webSocketServer.prototype.isExistsUser = function(uid){

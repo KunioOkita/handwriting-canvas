@@ -30,3 +30,7 @@ logger.info('Startup WebServer [port=' + HTTP_SERVER_PORT + ']');
 var webSocketServer = new exports.webSocketServer(WEBSOCKET_SERVER_PORT);
 webSocketServer.startup();
 logger.info('Startup WebSocketServer [port=' + WEBSOCKET_SERVER_PORT + ']');
+
+process.on('uncaughtException', (err) => {
+  console.log('uncaughtException', err);
+});

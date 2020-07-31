@@ -6,7 +6,7 @@
  * Constant
  */
 var WEB_SOCKET_URL_PREFIX = "ws://";
-var WEB_SOCKET_URL_PORT = 10004;
+var WEB_SOCKET_URL_PORT = 7070;
 
 var LOGIN_PAGE = 0;
 var ANSWER_PAGE = 1;
@@ -50,7 +50,7 @@ WebSocketClient.prototype.init = function() {
     this.ws.addEventListener("open",this.onOpenWebSocket,false);
     this.ws.addEventListener("close",this.onCloseWebSocket,false);
     this.ws.addEventListener("message",this.onMessageWebSocket,false);
-    
+
     //ウィンドウを閉じたり画面遷移した時にWebSokcetを切断する
     window.addEventListener("unload",this.onUnload,false);
 };
