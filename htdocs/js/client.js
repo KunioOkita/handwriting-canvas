@@ -37,7 +37,7 @@ function login() {
 
     changePage(userId);
 
-    wsClient = new webSocketClient(userId);
+    wsClient = new WebSocketClient(userId);
     wsClient.init();
 
     return false;

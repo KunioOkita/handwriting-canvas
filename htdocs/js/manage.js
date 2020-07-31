@@ -23,7 +23,7 @@ var wsClient;
 var canvasList = new Array();
 
 window.onload = function() {
-    wsClient = new webSocketClient(ADMIN_USER);
+    wsClient = new WebSocketClient(ADMIN_USER);
     wsClient.init();
     return false;
 }
