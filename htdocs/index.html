@@ -4,13 +4,27 @@
     <meta charset="utf-8"/>
     <!--<meta name="viewport" content="width=device-with, inial-scale=1, user-scalable=no"/>-->
     <title> Answer </title>
+    <script type="application/javascript" src="js/common.js"></script>
     <script type="application/javascript" src="js/client.js"></script>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
     <header>
     </header>
+    <section id="login">
+      <h1 id="login_title" class="title">Login Page</h1>
+      <label>
+	ID(半角英数字)<br/>
+	<input type="text" id="userid" name="userid" pattern="^[0-9A-Za-z]+$"/>
+      </label>
+      <br/>
+      <input type="button" value="参加する" onclick="login()"/>
+    </section>
     <section id="wrap_canvas">
+      <h1 id="answer_title" class="title">Answer Page (ID : <span id="user_id"></span>)</h1>
+      <p>問題：<span id="quession"></span>残り：<span id="timer"></span>秒</p>
+      <p>結果：<span id="result"></span></span></p>
+      <!--<input type="button" value="回答完了" onclick="finishAnswer()"/>-->
       <input type="button" value="Clear!" onclick="clearCanvas()"/><br/>
     </section>
     <footer>

@@ -1,0 +1,25 @@
+header {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+    width:1000px;
+}
+
+#answer_list {
+/*    float:left;*/
+}
+
+div#answer_list article{
+    width: 310px;
+    float:left;
+}
+
+canvas {
+    border: solid 1px black;
+}
+
+.connected {
+    color: blue;
+}
